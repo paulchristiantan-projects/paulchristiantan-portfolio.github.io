@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 1.5rem;
+    align-items: center;
+}
+.header ul {
+    display: flex;
+    list-style-type: none;
+    gap: 8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 300;
+    font-size: 16px;
+}
+.header .logo {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    font-size: 25px;
+}
+.banner {
+    background-image: url(../assets/images/main-background.webp);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    z-index: -1;
+}
+.banner .glass-wrapper {
+    width: 100%;
+    height: 10%;
+    background: rgba( 155, 155, 155, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.dp {
+    height: 20rem;
+    width: 20rem;
+    background-size: cover !important;
+    border-radius: 50%;
+    float: right;
+    padding: 20px;
+    margin-right: 15rem;
+    margin-top: 10rem;
+}
+
+.hero-title {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding-top: 13rem;
+}
+.hero-title p {
+    font-size: 47px;
+    text-transform: uppercase;
+    line-height: 60px;
+}
+.hero-title .name {
+    font-size: 50px;
+    letter-spacing: 3px;
+}
+.hero-title .position {
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+.hero-title .details {
+    width: 55%;
+    padding-top: 1.5rem;
+    font-weight: 200;
+    letter-spacing: 2px;
+    padding-bottom: 2.5rem;
+    font-style: italic;
+}
+.hero-title .explore button {
+    background: black;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 50px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+.hero-title .explore button:hover {
+    background: white;
+    color: black;
+}
+
+
+@media(max-width: 480px) {
+    .banner {
+        background: white;
+    }
+    .header {
+        display: block;
+    }
+    .header .logo {
+        display: block;
+        padding-bottom: 100px;
+        right: 0;
+    }
+    .header ul {
+        display: block;
+        list-style-type: none;
+        gap: 8rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 300;
+        font-size: 16px;
+    }
+    .header ul li {
+        padding: 20px 0px 20px 0px;
+        border-radius: 50px;
+        border: 1px solid black;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .dp {
+        display: flex;
+        background-size: cover !important;
+        border-radius: 50%;
+        margin: 0px auto;
+        padding: 20px;
+    }
+    .profile {
+        display: flex;
+    }
+    .hero-title {
+        margin: 0px auto;
+        padding-top: 0;
+    }
+    .hero-title p {
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    .hero-title .name {
+        font-size: 25px;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .hero-title .position {
+        font-size: 15px;
+        text-align: center;
+    }
+    .hero-title .details {
+        width: 100%;
+        text-align: center;
+        font-weight: 100;
+        padding-bottom: 0.5rem;
+    }
+    .hero-title .explore {
+        display: flex;
+        justify-content: center;
+        padding: 50px;
+    }
+    .hero-title .explore button {
+        background: black;
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: none;
+        color: white;
+        border-radius: 50px;
+        width: 100%;
+        min-height: 70px;
+        cursor: pointer;
+    }
+    @media(max-width: 720px) {
+        /* .banner {
+            background: red;
+        } */
+    }
+}
