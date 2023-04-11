@@ -3,6 +3,45 @@
     padding: 0;
     font-family: "Poppins", sans-serif;
 }
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+.bar {
+    display: flex;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    background-color: black;
+}
+@media(max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #262626;
+        text-align: center;
+        transition: 0.3s
+    }
+    .nav-menu .active {
+        left: 0;
+    }
+}
 .header {
     display: flex;
     justify-content: space-between;
@@ -27,8 +66,6 @@
     font-size: 25px;
 }
 .banner {
-    background-image: url(../assets/images/main-background.webp);
-    background-size: cover;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -191,40 +228,27 @@
 
 /*media query*/
 
-@media(max-width: 480px) {
+@media(max-width: 768px) {
     .banner {
         background: white;
     }
     .header {
-        display: block;
+        display: flex;
+        margin-bottom: 50px;
     }
     .header .logo {
         display: block;
-        padding-bottom: 100px;
         right: 0;
     }
     .header ul {
-        display: block;
-        list-style-type: none;
-        gap: 8rem;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        font-weight: 300;
-        font-size: 16px;
-    }
-    .header ul li {
-        padding: 20px 0px 20px 0px;
-        border-radius: 50px;
-        border: 1px solid black;
-        text-align: center;
-        margin-bottom: 20px;
+        display: none;
     }
     .dp {
         display: flex;
         background-size: cover !important;
         border-radius: 50%;
         margin: 0px auto;
-        padding: 20px;
+        padding: 0px;
     }
     .profile {
         display: flex;
@@ -270,9 +294,90 @@
         min-height: 70px;
         cursor: pointer;
     }
-    @media(max-width: 720px) {
-        /* .banner {
-            background: red;
-        } */
+    .card-experiences-container {
+        margin-top: 5rem;
+    }
+    .card-experiences-container p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    .cards {
+        display: flex;
+        flex-flow: column;
+        box-sizing: border-box;
+        margin-top: 0;
+    }
+    .card {
+        min-height: 500px;
+        box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        padding: 20px;
+        margin-right: 0px;
+    }
+    .card:last-child {
+        margin: 0;
+    }
+    .card .image-card {
+        padding: 50px;
+    }
+    .card img {
+        width: 100%;
+        height: auto;   
+    }
+    .card-content {
+        padding: 10px;
+        background-color:(255,255,255,0.8);
+        position: absolute;
+    }
+    .card-content h3 {
+        font-size: 24px;
+        color: #333;
+    }
+    .card-content p {
+        font-size: 8px;
+        color: #666;
+        margin: 5px 0px;
+        justify-content: left;
+    }
+    .card-content .position {
+        margin-top: 20px;
+        color: #111111;
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+    .card-content .position p {
+        color: #666;
+        padding-bottom: 20px;
+    }
+    .card-footer-infor {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 20px;
+        background-color: red;
+    }
+    .card-footer-ibm {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 20px;
+        background-color: #000000;
+    }
+    .card-footer-csi {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 20px;
+        background-color: blue;
     }
 }
