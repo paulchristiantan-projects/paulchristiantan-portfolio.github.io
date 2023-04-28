@@ -82,6 +82,19 @@
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
+.front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile {
+    margin: 0px auto;
+    order: 1;
+    width: 40%;
+    padding-top: 13rem;
+    display: flex;
+    flex-direction: row-reverse;
+}
 .dp {
     height: 20rem;
     width: 20rem;
@@ -89,18 +102,16 @@
     border-radius: 50%;
     float: right;
     padding: 20px;
-    margin-right: 15rem;
-    margin-top: 10rem;
 }
 
 .hero-title {
-    max-width: 1200px;
-    margin: 0px auto;
+    order: 2;
+    width: 60%;
     padding-top: 13rem;
+    padding-left: 5rem;
 }
 .hero-title p {
     font-size: 47px;
-    text-transform: uppercase;
     line-height: 60px;
 }
 .hero-title .name {
@@ -110,6 +121,7 @@
 .hero-title .position {
     font-size: 25px;
     letter-spacing: 3px;
+    text-transform: uppercase;
 }
 .hero-title .details {
     width: 55%;
@@ -137,10 +149,10 @@
     color: black;
 }
 
-.card-experiences-container {
+.card-experiences-container, .techstack-container {
     margin-top: 25rem;
 }
-.card-experiences-container p {
+.card-experiences-container p, .techstack-container p {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -155,6 +167,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 100px;
+    padding-bottom: 10rem;
 }
 .card {
     width: 250px;
@@ -225,8 +238,125 @@
     padding: 20px;
     background-color: blue;
 }
+.cards-techstack {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    padding-bottom: 10rem;
+}
+.card-techstack {
+    width: 250px;
+    max-height: 250px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+    margin-right: 50px;  
+}
+.card-techstack img {
+    width: 100%;
+    height: auto;   
+}
+.card-techstack .image-card {
+    padding: 50px;
+}
+footer {
+    width: 100%;
+    background: #333333;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    height:auto;
+    font-family: "Open Sans";
+    padding-top: 50px;
+    color: white;
+}
 
-/*media query*/
+footer .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p {
+    max-width: 500;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 50px;
+    padding-top: 50px;
+}
+.icon {
+    display: inline-flex;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    outline: 2.5px solid #4d4d4d;
+    transition-property: outline-offset, outline-color, background-color;
+    transition-duration: 0.25s;
+}
+
+.socials li {
+    /* margin: 0 10px */
+    align-items: center;
+    justify-content: center;
+}
+
+.icon:hover {
+    outline-offset: 4px;
+}
+.icon i {
+    margin: auto;
+    color: black;
+}
+.icon:hover i {
+    animation: shake 0.25s;
+}
+@keyframes shake {
+    10% {
+        transform: rotate(15deg);
+    }
+    20% {
+        transform: rotate(-15deg);
+    }
+    30% {
+        transform: rotate(15deg);
+    }
+    40% {
+        transform: rotate(-15deg);
+    }
+}
+.footer-bottom {
+    background-color: #333333;
+    width: 100vw;
+    padding: 10px 0;
+    text-align: center;
+}
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+/*media query for mobile*/
 
 @media(max-width: 768px) {
     .banner {
@@ -243,6 +373,9 @@
     .header ul {
         display: none;
     }
+    .front {
+        display: block;
+    }
     .dp {
         display: flex;
         background-size: cover !important;
@@ -252,14 +385,18 @@
     }
     .profile {
         display: flex;
+        width: 100%;
+        padding-top: 0;
     }
     .hero-title {
         margin: 0px auto;
         padding-top: 0;
+        padding: 0;
+        width: 100%;
+        
     }
     .hero-title p {
         font-weight: 400;
-        text-transform: uppercase;
     }
     .hero-title .name {
         font-size: 25px;
@@ -297,7 +434,11 @@
     .card-experiences-container {
         margin-top: 5rem;
     }
-    .card-experiences-container p {
+    .work-exp-title, .technologies-title {
+        margin-bottom: 3rem;
+        font-weight: 700;
+    }
+    .card-experiences-container p, .techstack-container p {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -320,6 +461,7 @@
         position: relative;
         padding: 20px;
         margin-right: 0px;
+        margin-bottom: 100px;
     }
     .card:last-child {
         margin: 0;
@@ -379,5 +521,11 @@
         width: 100%;
         padding: 20px;
         background-color: blue;
+    }
+    footer {
+        display: none;
+    }
+    .socials {
+        justify-content: center;
     }
 }
