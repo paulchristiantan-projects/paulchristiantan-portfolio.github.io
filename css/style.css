@@ -3,6 +3,22 @@
     padding: 0;
     font-family: "Poppins", sans-serif;
 }
+.dark-mode {
+    background-color: #272343;
+    color: #E3F6F5;
+}
+.light-mode {
+    background-color: #E3F6F5;
+    color: #272343;
+}
+.dark-mode-icon, .light-mode-icon {
+    background: none;
+    border: none;
+}
+.dark-mode-icon img, .light-mode-icon img {
+    height: 50px;
+    width: 50px;
+}
 .hamburger {
     display: none;
     cursor: pointer;
@@ -13,7 +29,7 @@
     height: 3px;
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
-    background-color: black;
+    background: black;
 }
 @media(max-width: 768px) {
     .hamburger {
@@ -75,8 +91,8 @@
 .banner .glass-wrapper {
     width: 100%;
     height: 4rem;
-    background: rgba( 155, 155, 155, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    /* background: rgba( 155, 155, 155, 0.25 ); */
+    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
@@ -138,7 +154,7 @@
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
     border: none;
-    color: white;
+    /* color: white; */
     padding: 12px 15px;
     border-radius: 50px;
     letter-spacing: 1.5px;
@@ -146,7 +162,7 @@
 }
 .hero-title .explore button:hover {
     background: white;
-    color: black;
+    /* color: black; */
 }
 
 .card-experiences-container, .techstack-container {
@@ -172,7 +188,7 @@
 .card {
     width: 250px;
     height: 500px;
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+    box-shadow: 0px 10px 20px #537FE7;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
@@ -196,22 +212,21 @@
 }
 .card-content h3 {
     font-size: 24px;
-    color: #333;
+    /* color: #333; */
 }
 .card-content p {
     font-size: 8px;
-    color: #666;
+    /* color: #666; */
     margin: 5px 0px;
     justify-content: left;
 }
 .card-content .position {
     margin-top: 20px;
-    color: #111111;
     margin-bottom: 20px;
     font-weight: 500;
 }
 .card-content .position p {
-    color: #666;
+    /* color: #666; */
     padding-bottom: 20px;
 }
 .card-footer-infor {
@@ -274,7 +289,7 @@ footer {
     height:auto;
     font-family: "Open Sans";
     padding-top: 50px;
-    color: white;
+    /* color: white; */
 }
 
 footer .content {
@@ -309,7 +324,7 @@ footer .content {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    outline: 2.5px solid #4d4d4d;
+    outline: 2.5px solid #537FE7;
     transition-property: outline-offset, outline-color, background-color;
     transition-duration: 0.25s;
 }
@@ -325,7 +340,7 @@ footer .content {
 }
 .icon i {
     margin: auto;
-    color: black;
+    color: #537FE7;
 }
 .icon:hover i {
     animation: shake 0.25s;
@@ -359,9 +374,6 @@ footer .content {
 /*media query for mobile*/
 
 @media(max-width: 768px) {
-    .banner {
-        background: white;
-    }
     .header {
         display: flex;
         margin-bottom: 50px;
@@ -425,7 +437,7 @@ footer .content {
         -webkit-backdrop-filter: blur( 4px );
         border-radius: 10px;
         border: none;
-        color: white;
+        /* color: white; */
         border-radius: 50px;
         width: 100%;
         min-height: 70px;
@@ -480,22 +492,22 @@ footer .content {
     }
     .card-content h3 {
         font-size: 24px;
-        color: #333;
+        /* color: #333; */
     }
     .card-content p {
         font-size: 8px;
-        color: #666;
+        /* color: #666; */
         margin: 5px 0px;
         justify-content: left;
     }
     .card-content .position {
         margin-top: 20px;
-        color: #111111;
+        /* color: #111111; */
         margin-bottom: 20px;
         font-weight: 500;
     }
     .card-content .position p {
-        color: #666;
+        /* color: #666; */
         padding-bottom: 20px;
     }
     .card-footer-infor {
